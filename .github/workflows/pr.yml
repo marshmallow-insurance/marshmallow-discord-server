@@ -15,6 +15,7 @@ jobs:
         run: |
           cd terraform
           terraform init
+          terraform get -update
       - name: Terraform validate
         run: |
           cd terraform
