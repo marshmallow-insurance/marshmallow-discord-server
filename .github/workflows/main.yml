@@ -25,6 +25,6 @@ jobs:
           cd terraform
           git config user.name "Github"
           git config user.email "github@github.com"
-          git add terraform.tfstate terraform.tfstate.backup
+          git add terraform.tfstate terraform.tfstate.backup .terraform.lock.hcl
           git commit -m "Update state files"
           git push
