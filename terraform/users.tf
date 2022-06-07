@@ -6,21 +6,16 @@ resource "discord_member_roles" "heather_role" {
   }
 }
 
-resource "discord_member_roles" "charlie_role" {
-  user_id   = data.discord_member.charlie.id
-  server_id = discord_server.server.id
-  role {
-    role_id = discord_role.moderator.id
-  }
-}
-
 resource "discord_role" "moderator" {
   server_id = discord_server.server.id
   name      = "Moderator"
 }
 
-data "discord_member" "charlie" {
-  server_id     = discord_server.server.id
-  username      = "Bspammer"
-  discriminator = "9717"
+module "add_charlie" {
+  source             = "./modules/new-member"
+  server_id          = discord_server.server.id
+  username           = "Bspammer"
+  user_discriminator = "9717"
+  display_name       = "Charlie"
+  welcome_channel_id = discord_text_channel.welcome.id
 }
