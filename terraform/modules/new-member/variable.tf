@@ -22,3 +22,8 @@ variable "welcome_channel_id" {
   type        = string
   description = "ID for the channel to post the users welcome message"
 }
+
+variable "user_role_id" {
+  type        = string
+  description = "ID for the role to give the the new user"
+}

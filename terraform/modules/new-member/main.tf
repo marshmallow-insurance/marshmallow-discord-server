@@ -19,19 +19,9 @@ resource "discord_member_roles" "basic_user" {
   user_id   = data.discord_member.user_by_username.id
   server_id = var.server_id
   role {
-    role_id = discord_role.basic_user_role.id
+    role_id = var.user_role_id
   }
 }
-
-resource "discord_role" "basic_user_role" {
-  server_id   = var.server_id
-  name        = "Basic User"
-  permissions = data.discord_permission.basic_user.allow_bits
-  color       = data.discord_color.marshmallow_pink.dec
-  hoist       = true
-  mentionable = true
-}
-
 
 resource "discord_message" "welcome_message" {
   channel_id = var.welcome_channel_id
@@ -46,17 +36,5 @@ resource "discord_message" "welcome_message" {
       text = "Say hello and have a look around!"
     }
   }
-}
-
-data "discord_permission" "basic_user" {
-  view_channel        = "allow"
-  send_messages       = "allow"
-  use_external_emojis = "allow"
-  use_vad             = "deny"
-  priority_speaker    = "deny"
-}
-
-data "discord_color" "marshmallow_pink" {
-  hex = "#ff4e75"
 }
 
