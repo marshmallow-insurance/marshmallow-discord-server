@@ -19,3 +19,12 @@ module "add_charlie" {
   display_name       = "Charlie"
   welcome_channel_id = discord_text_channel.welcome.id
 }
+
+module "add_sven" {
+  source             = "./modules/new-member"
+  server_id          = discord_server.server.id
+  username           = "Uncle_Shween"
+  user_discriminator = "9475"
+  display_name       = "Sven"
+  welcome_channel_id = discord_text_channel.welcome.id
+}
