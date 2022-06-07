@@ -30,7 +30,6 @@ resource "discord_role" "basic_user_role" {
   color       = data.discord_color.marshmallow_pink.dec
   hoist       = true
   mentionable = true
-  position    = 5
 }
 
 
