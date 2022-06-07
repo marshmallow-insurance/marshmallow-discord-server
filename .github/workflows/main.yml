@@ -22,6 +22,7 @@ jobs:
         continue-on-error: true
       - name: Commit state
         run: |
+          cd terraform
           git config user.name "Github"
           git config user.email "github@github.com"
           git add terraform.tfstate terraform.tfstate.backup
