@@ -38,7 +38,7 @@ resource "discord_message" "welcome_message" {
   embed {
     title = "Welcome to the club ${var.display_name}!"
     fields {
-      name = "Username"
+      name = "Username:"
       value = var.username
       inline = false
     }
