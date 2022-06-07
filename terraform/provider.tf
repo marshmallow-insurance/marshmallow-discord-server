@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     discord = {
-      source = "aequasi/discord"
+      source  = "aequasi/discord"
       version = "0.0.4"
     }
   }
