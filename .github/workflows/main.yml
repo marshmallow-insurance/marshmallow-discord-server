@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.tf'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: hashicorp/setup-terraform@v1
+      - name: Apply terraform
+        run: |
+          cd terraform
+          terraform init
+          terraform apply -auto-approve -input=false -var discord_token=${{ secrets.DISCORD_TOKEN }}
+          
+          git config user.name "Github"
+          git config user.email "github@github.com"
+          git add terraform.tfstate terraform.tfstate.backup
+          git commit -m "Update state files"
+          git push

@@ -7,6 +7,7 @@ terraform {
   }
 }
 
+variable discord_token {}
 provider "discord" {
-  token = "***REMOVED***"
+  token = var.discord_token
 }
