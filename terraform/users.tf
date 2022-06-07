@@ -1,15 +1,8 @@
-resource "discord_member_roles" "heather_role" {
-  user_id   = 715998859616190464
-  server_id = discord_server.server.id
-  role {
-    role_id = discord_role.moderator.id
-  }
-}
-
 resource "discord_role" "moderator" {
   server_id = discord_server.server.id
   name      = "Moderator"
   position  = 0
+  color     = data.discord_color.terraform_purple.dec
 }
 
 resource "discord_role" "basic_user_role" {
@@ -34,6 +27,10 @@ data "discord_color" "marshmallow_pink" {
   hex = "#ff4e75"
 }
 
+data "discord_color" "terraform_purple" {
+  hex = "#8040c9"
+}
+
 module "add_charlie" {
   source             = "./modules/new-member"
   server_id          = discord_server.server.id
@@ -52,4 +49,14 @@ module "add_sven" {
   display_name       = "Sven"
   welcome_channel_id = discord_text_channel.welcome.id
   user_role_id       = discord_role.basic_user_role.id
+}
+
+module "add_heather" {
+  source             = "./modules/new-member"
+  server_id          = discord_server.server.id
+  username           = "hbwhyte"
+  user_discriminator = "8473"
+  display_name       = "Heather"
+  welcome_channel_id = discord_text_channel.welcome.id
+  user_role_id       = discord_role.moderator.id
 }
