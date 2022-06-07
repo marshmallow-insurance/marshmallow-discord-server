@@ -8,5 +8,5 @@ terraform {
 }
 
 provider "discord" {
-  # Configuration options
+  token = "***REMOVED***"
 }
