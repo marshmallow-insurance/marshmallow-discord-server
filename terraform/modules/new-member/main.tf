@@ -37,6 +37,11 @@ resource "discord_message" "welcome_message" {
   channel_id = var.welcome_channel_id
   embed {
     title = "Welcome to the club ${var.display_name}!"
+    fields {
+      name = "Username"
+      value = var.username
+      inline = false
+    }
     footer {
       text = "Say hello and have a look around!"
     }
