@@ -19,7 +19,9 @@ jobs:
           cd terraform
           terraform init
           terraform apply -auto-approve -input=false -var discord_token=${{ secrets.DISCORD_TOKEN }}
-          
+        continue-on-error: true
+      - name: Commit state
+        run: |
           git config user.name "Github"
           git config user.email "github@github.com"
           git add terraform.tfstate terraform.tfstate.backup
