@@ -41,7 +41,7 @@ module "add_Thelma" {
 module "add_danny" {
   source             = "./modules/new-member"
   server_id          = discord_server.server.id
-  username           = "kuwotu"
+  username           = "Executioner"
   user_discriminator = "7363"
   display_name       = "Daniel"
   welcome_channel_id = discord_text_channel.welcome.id
