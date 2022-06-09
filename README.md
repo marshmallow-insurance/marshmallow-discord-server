@@ -1,4 +1,12 @@
-# Marshmallow meetup terraform intro with discord
+<h1 align="center">
+  <br>
+  <img src="https://global-uploads.webflow.com/5baa461315ee32413d16236d/5bb3a6170a88c4f84b60dc67_mallows.svg" alt="Marshmallow" width="200">
+  <br>
+  Marshmallow Meet Workshop
+  <br>
+</h1>
+
+<h3 align="center"></a>Terraform Intro with Discord!</h4>
 
 This project is designed to be used by the attendees at the first ever Marshmallow meetup developer event. The repo will
 give a brief introduction to terraform through the use of a discord provider that allows developers to edit the
@@ -50,8 +58,8 @@ module "add_<first_name>" {
   source             = "./modules/new-member"
   server_id          = discord_server.server.id
   username           = "<discord_username_without_number>"
-  user_discriminator = "<username_number>"
-  display_name       = "<Any preferred display name>"
+  user_discriminator = "<username_numer>"
+  display_name       = "<Any preffered display name>"
   welcome_channel_id = discord_text_channel.welcome.id
   user_role_id       = discord_role.basic_user_role.id
 }
