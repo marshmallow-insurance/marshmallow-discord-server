@@ -15,11 +15,28 @@ can create one here:
 
 - https://discord.com/register
 
-Once you have an account, accept the invite link below:
+Once you have an account, accept the invite link below and follow the instructions to join 
+the server. You will then have access to the server by clicking on the pink & white M logo on the left 
+side of your discord page.
 
 - https://discord.gg/74wYXMs6WG
 
-### Step two: Add yourself as a basic user
+### Step two: Install terraform (optional).
+
+Note that this section is optional as it wont be used for our workshop, all terraform applies will be run through GitHub
+actions.
+
+To install Terraform, follow the instructions on the page linked below:
+
+- https://learn.hashicorp.com/tutorials/terraform/install-cli
+
+Once you have installed terraform, running the command below to verify its installed. 
+
+```terraform
+terraform -help
+``` 
+
+### Step three: Add yourself as a basic user
 
 In this step, you will set yourself a new role as a basic user. First, you will need your user details.
 
@@ -54,7 +71,7 @@ module "add_sven" {
 }
 ```
 
-### Step three: Apply the change
+### Step four: Apply the change
 Create a pull request on the repo. This will create a plan message on the PR automatically through GitHub actions.
 
 Once approved and merged, you should see the change on the server!
