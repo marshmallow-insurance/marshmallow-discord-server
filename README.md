@@ -1,7 +1,7 @@
-# Marshmallow meetup discord shenanigans
+# Marshmallow meetup terraform intro with discord
 
 This project is designed to be used by the attendees at the first ever Marshmallow meetup developer event. The repo will
-give a brief introduction to terraform through the use of a discord module that allows developers to edit the
+give a brief introduction to terraform through the use of a discord provider that allows developers to edit the
 Marshmallow discord server.
 
 ## Setup
@@ -32,7 +32,7 @@ To install Terraform, follow the instructions on the page linked below:
 
 Once you have installed terraform, run the command below to verify it's installed.
 
-```terraform
+```bash
 terraform -help
 ``` 
 
