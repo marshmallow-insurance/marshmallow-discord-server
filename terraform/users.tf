@@ -1,4 +1,4 @@
-module "add_jodu#6606" {
+module "add_jodu" {
   source             = "./modules/new-member"
   server_id          = discord_server.server.id
   username           = "jodu"
