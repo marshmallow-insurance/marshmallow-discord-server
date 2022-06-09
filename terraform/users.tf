@@ -28,3 +28,12 @@ module "add_rudi" {
   user_role_id       = discord_role.basic_user_role.id
 }
 
+module "add_Thelma" {
+  source             = "./modules/new-member"
+  server_id          = discord_server.server.id
+  username           = "thelmaandherls"
+  user_discriminator = "9330"
+  display_name       = "Thelmz"
+  welcome_channel_id = discord_text_channel.welcome.id
+  user_role_id       = discord_role.basic_user_role.id
+}
