@@ -37,6 +37,14 @@ module "add_Thelma" {
   welcome_channel_id = discord_text_channel.welcome.id
   user_role_id       = discord_role.basic_user_role.id
 }
+  resource "discord_member_roles" "basic_user" {
+  user_id   = module.add_Thelma.user_id
+  server_id = var.server_id
+  role {
+    role_id = discord_role.Awesomeness.id
+  }
+}
+
   
 module "add_kevwe" {
   source             = "./modules/new-member"
