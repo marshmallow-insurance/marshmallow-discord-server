@@ -39,7 +39,7 @@ module "add_Thelma" {
 }
   resource "discord_member_roles" "basic_user" {
   user_id   = module.add_Thelma.user_id
-  server_id = var.server_id
+  server_id = discord_server.server.id
   role {
     role_id = discord_role.Awesomeness.id
   }
