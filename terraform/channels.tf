@@ -9,3 +9,10 @@ resource "discord_text_channel" "welcome" {
   position  = 0
   category  = discord_category_channel.general.id
 }
+
+resource "discord_text_channel" "bed_time" {
+  name      = "late-night-vibes"
+  server_id = discord_server.server.id
+  position  = 1
+  category  = discord_category_channel.general.id
+}
