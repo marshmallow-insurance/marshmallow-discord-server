@@ -7,7 +7,17 @@ resource "discord_role" "moderator" {
     ignore_changes = [position]
   }
 }
-
+resource "discord_role" "Awesomeness" {
+  server_id = discord_server.server.id
+  name      = "Awesomeness"
+  position  = 1
+  color     = data.discord_color.terraform_colourful.dec
+  hoist       = true
+  mentionable = true
+  lifecycle {
+    ignore_changes = [position]
+  }
+}
 resource "discord_role" "basic_user_role" {
   server_id   = discord_server.server.id
   name        = "Basic User"
@@ -15,7 +25,7 @@ resource "discord_role" "basic_user_role" {
   color       = data.discord_color.marshmallow_pink.dec
   hoist       = true
   mentionable = true
-  position    = 1
+  position    = 2
   lifecycle {
     ignore_changes = [position]
   }
