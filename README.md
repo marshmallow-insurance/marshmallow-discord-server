@@ -19,24 +19,7 @@ Once you have an account, accept the invite link below:
 
 - https://discord.gg/74wYXMs6WG
 
-### Step two: Install terraform (optional).
-
-Note that this section is optional as for our workshop, all terraform applies will be run through GitHub
-actions.
-
-To install Terraform, follow the instructions on the page linked below:
-
-- https://learn.hashicorp.com/tutorials/terraform/install-cli
-
-Once you have installed terraform, running
-
-```terraform
-terraform plan
-``` 
-
-in this repo should show you any planned changes.
-
-### Step three: Add yourself as a basic user
+### Step two: Add yourself as a basic user
 
 In this step, you will set yourself a new role as a basic user. First, you will need your user details.
 
@@ -71,11 +54,7 @@ module "add_sven" {
 }
 ```
 
-### Step four: Apply the change
-
-If you would like to see the changes locally, you can run the command `terraform plan`, you will also see these changes
-when you create a pull request.
-
+### Step three: Apply the change
 Create a pull request on the repo. This will create a plan message on the PR automatically through GitHub actions.
 
 Once approved and merged, you should see the change on the server!
