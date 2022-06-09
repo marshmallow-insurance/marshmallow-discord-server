@@ -3,6 +3,7 @@
   <img src="https://global-uploads.webflow.com/5baa461315ee32413d16236d/5bb3a6170a88c4f84b60dc67_mallows.svg" alt="Marshmallow" width="200">
   <br>
   Marshmallow Meet Workshop
+  freedom was here
   <br>
 </h1>
 
