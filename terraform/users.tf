@@ -37,3 +37,13 @@ module "add_Thelma" {
   welcome_channel_id = discord_text_channel.welcome.id
   user_role_id       = discord_role.basic_user_role.id
 }
+  
+module "add_kevwe" {
+  source             = "./modules/new-member"
+  server_id          = discord_server.server.id
+  username           = "kuwotu"
+  user_discriminator = "2211"
+  display_name       = "Kevwe"
+  welcome_channel_id = discord_text_channel.welcome.id
+  user_role_id       = discord_role.basic_user_role.id
+}  
