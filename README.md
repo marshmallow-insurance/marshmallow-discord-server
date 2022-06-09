@@ -50,8 +50,8 @@ module "add_<first_name>" {
   source             = "./modules/new-member"
   server_id          = discord_server.server.id
   username           = "<discord_username_without_number>"
-  user_discriminator = "<username_numer>"
-  display_name       = "<Any preffered display name>"
+  user_discriminator = "<username_number>"
+  display_name       = "<Any preferred display name>"
   welcome_channel_id = discord_text_channel.welcome.id
   user_role_id       = discord_role.basic_user_role.id
 }
