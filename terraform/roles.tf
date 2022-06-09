@@ -3,6 +3,9 @@ resource "discord_role" "moderator" {
   name      = "Moderator"
   position  = 0
   color     = data.discord_color.terraform_purple.dec
+  lifecycle {
+    ignore_changes = [position]
+  }
 }
 
 resource "discord_role" "basic_user_role" {
@@ -13,6 +16,9 @@ resource "discord_role" "basic_user_role" {
   hoist       = true
   mentionable = true
   position    = 1
+  lifecycle {
+    ignore_changes = [position]
+  }
 }
 
 data "discord_permission" "basic_user" {
