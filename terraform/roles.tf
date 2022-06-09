@@ -37,3 +37,7 @@ data "discord_color" "terraform_purple" {
   hex = "#8040c9"
 }
 
+data "discord_color" "terraform_colourful" {
+  hex = "#33aa99"
+}
+
